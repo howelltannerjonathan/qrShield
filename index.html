@@ -1,87 +1,191 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>qrShield</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>qrShield</title>
 
-  <style>
-    body {
-      margin: 0;
-      min-height: 100vh;
-      background: #06111f;
-      color: #d7ecff;
-      font-family: Arial, Helvetica, sans-serif;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 24px;
-    }
+<style>
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #06111f;
+  color: #d7ecff;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+}
 
-    .card {
-      max-width: 760px;
-      background: #102338;
-      border: 1px solid #8ccfff;
-      border-radius: 24px;
-      padding: 40px;
-      text-align: center;
-      box-shadow: 0 0 30px rgba(53, 200, 255, 0.35);
-    }
+.app {
+  width: 100%;
+  max-width: 430px;
+  text-align: center;
+}
 
-    h1 {
-      margin: 0 0 16px;
-      font-size: 56px;
-      color: #ffffff;
-    }
+.logo {
+  font-size: 58px;
+  font-weight: 900;
+  margin-bottom: 20px;
+}
 
-    h1 span {
-      color: #9da7b3;
-    }
+.logo .qr {
+  color: white;
+}
 
-    p {
-      font-size: 20px;
-      line-height: 1.6;
-      margin: 16px 0;
-    }
+.logo .shield {
+  color: #9da7b3;
+}
 
-    .button {
-      display: inline-block;
-      margin-top: 22px;
-      padding: 14px 22px;
-      border-radius: 999px;
-      background: #0877ff;
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-      border: 2px solid #35c8ff;
-    }
+.card {
+  background: #102338;
+  border: 2px solid #8ccfff;
+  border-radius: 34px;
+  padding: 34px 26px;
+  box-shadow: 0 0 28px rgba(53, 200, 255, 0.45);
+}
 
-    .small {
-      margin-top: 24px;
-      font-size: 14px;
-      color: #9fc4d9;
-    }
-  </style>
+.shieldIcon {
+  font-size: 100px;
+  color: #38ff8b;
+  text-shadow: 0 0 25px #38ff8b;
+}
+
+.title {
+  color: #9fc4d9;
+  font-size: 24px;
+  font-weight: 800;
+  margin-top: 10px;
+}
+
+.verdict {
+  color: #38ff8b;
+  font-size: 48px;
+  font-weight: 900;
+  margin: 18px 0;
+  text-shadow: 0 0 18px #38ff8b;
+}
+
+.scoreLabel {
+  color: #9fc4d9;
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.bar {
+  height: 14px;
+  width: 100%;
+  background: #1d344d;
+  border-radius: 999px;
+  margin: 14px 0;
+  overflow: hidden;
+}
+
+.fill {
+  width: 20%;
+  height: 100%;
+  background: #38ff8b;
+  border-radius: 999px;
+}
+
+.score {
+  font-size: 28px;
+  font-weight: 900;
+}
+
+.divider {
+  height: 1px;
+  background: #28445f;
+  margin: 26px 0;
+}
+
+.section {
+  text-align: left;
+}
+
+.section h2 {
+  color: #9fc4d9;
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.section p {
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.buttons {
+  margin-top: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.storeButton {
+  border: 2px solid #8ccfff;
+  border-radius: 24px;
+  padding: 16px;
+  color: #d7ecff;
+  font-weight: 900;
+  text-decoration: none;
+  background: #14324f;
+}
+
+.footer {
+  margin-top: 28px;
+  color: #9fc4d9;
+  font-size: 14px;
+}
+
+.footer a {
+  color: #35c8ff;
+  text-decoration: none;
+  font-weight: 800;
+}
+</style>
 </head>
 
 <body>
-  <div class="card">
-    <h1>qr<span>Shield</span></h1>
+  <main class="app">
+    <div class="logo">
+      <span class="qr">qr</span><span class="shield">Shield</span>
+    </div>
 
-    <p>
-      Know where a QR code leads before you open it.
-    </p>
+    <section class="card">
+      <div class="shieldIcon">🛡</div>
 
-    <p>
-      qrShield helps inspect QR code links for redirects, suspicious URL patterns,
-      threat intelligence reputation, and potential security risks.
-    </p>
+      <div class="title">Threat Assessment</div>
+      <div class="verdict">Looks Good</div>
 
-    <a class="button" href="privacy.html">Privacy Policy</a>
+      <div class="scoreLabel">Risk Score</div>
+      <div class="bar"><div class="fill"></div></div>
+      <div class="score">20/100</div>
 
-    <p class="small">
-      Coming soon to iOS and Android.
-    </p>
-  </div>
+      <div class="divider"></div>
+
+      <div class="section">
+        <h2>🌐 Destination</h2>
+        <p>Scan QR codes before opening them.</p>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="section">
+        <h2>Threat Intelligence</h2>
+        <p>Checks redirects, suspicious URL patterns, VirusTotal reputation, and URLhaus malware listings.</p>
+      </div>
+
+      <div class="buttons">
+        <div class="storeButton"> Coming Soon on the App Store</div>
+        <div class="storeButton">🤖 Coming Soon on Google Play</div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>Version 1.0.0</p>
+      <p><a href="privacy.html">Privacy Policy</a></p>
+    </footer>
+  </main>
 </body>
 </html>
